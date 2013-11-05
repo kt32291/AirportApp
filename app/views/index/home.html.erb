@@ -1,0 +1,37 @@
+<head>
+<link rel="stylesheet" href="https://raw.github.com/necolas/normalize.css/master/normalize.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+  <h1></i>Katie's Airports</h1>
+  <div class="airports">
+  <ul class="list">
+  <% @all_info.each do |c| %>
+  <% item = Airport.new %>
+  <% item.code = c.code %>
+  <% num = c.id - 1 %>
+  <li class="cities">
+  <p class="code"><a href="/details/<%= num %>"><%= c.code %></a></p>
+  <% if item.delay == 0 %>
+  <p class="name"><span class="home_green"><i class="fa fa-plane"></i></span> <%= c.city_code %></p>
+  <% elsif item.delay < 15 %>
+  <p class="name"><span class="home_yellow"><i class="fa fa-plane"></i></span> <%= c.city_code %></p>
+  <% else %>
+  <p class="name"><span class="home_red"><i class="fa fa-plane"></i></span> <%= c.city_code %></p>
+  <% end %>
+  <% if item.temperature < 40 %>
+  <p class="cold"><%= item.temperature %>&degF</p>
+  <% elsif item.temperature < 55 %>
+  <p class="cool"><%= item.temperature %>&degF</p>
+  <% elsif item.temperature < 60 %>
+  <p class="mild"><%= item.temperature %>&degF</p>
+  <% elsif item.temperature <80 %>
+  <p class="warm"><%= item.temperature %>&degF</p>
+  <% else %>
+  <p class="hot"><%= item.temperature %>&degF</p>
+  <% end %>
+  </li>
+  <% end %>
+</ul>
+</div>
+</body>

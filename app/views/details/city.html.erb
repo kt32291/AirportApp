@@ -1,0 +1,36 @@
+<head>
+<link rel="stylesheet" href="https://raw.github.com/necolas/normalize.css/master/normalize.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1></i><%= @city_det.code %></h1>
+  <div class="airports" id="city">
+    <% det = Airport.new %>
+  <% det.code = @city_det.code %>
+  <ul>
+    <li class="temp"><h2><%= @city_det.city_code %>:</h2></li>
+    <li class="temp" id="temp1">
+  <% if det.temperature < 40 %>
+  <p class="cold"><%= det.temperature %>&degF</p>
+  <% elsif det.temperature < 55 %>
+  <p class="cool"><%= det.temperature %>&degF</p>
+  <% elsif det.temperature < 60 %>
+  <p class="mild"><%= det.temperature %>&degF</p>
+  <% elsif det.temperature <80 %>
+  <p class="warm"><%= det.temperature %>&degF</p>
+  <% else %>
+  <p class="hot"><%= det.temperature %>&degF</p>
+  <% end %>
+    </li>
+    <li class="temp" id="temp2">
+  <% if det.delay == 0 %>
+  <p class="info"><i class="fa fa-plane"></i></p>
+  <% elsif det.delay < 15 %>
+  <p class="yellow"><i class="fa fa-plane"></i></p>
+  <% else %>
+  <p class="red"><i class="fa fa-plane"></i></p>
+  <% end %>
+    </li>
+  </ul>
+</body>

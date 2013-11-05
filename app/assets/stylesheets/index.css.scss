@@ -1,0 +1,61 @@
+
+h1 {text-align: center;
+    font-size: 72pt;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    padding: 20px 50px;}
+body {text-align: center;
+      font-family: arial;
+      margin: 0px;
+      padding: 0px;
+      background-image: url(hoffman.png);}
+.airports {height: 400px;
+            background-color: rgba(0,0,0,.35);
+            text-align: center;}
+li.cities {display: inline-block;
+    text-align: center;
+    margin: 30px 50px;}
+ul {text-align: center;
+    margin: 0px auto;}
+p.code {font-size: 45pt;
+        color: white;
+        margin: 30px;
+        padding: 0px 15px;
+        border-left: 2px solid white;
+        border-right: 2px solid white;}
+a {color: white;
+    text-decoration: none;}
+a:hover {color: black;}
+p.code:hover {color: black;
+              border-left: 2px solid black;
+              border-right: 2px solid black;}
+p.name {font-size: 30pt;
+        color: black;}
+.home_green:hover {color: green;}
+.home_yellow:hover {color: yellow;}
+.home_red:hover {color: red;}
+p {font-size: 70pt;
+        margin: 0px auto;}
+h2 {font-size: 32pt;
+    padding-top: 40px;
+    text-align: center;}
+li.temp {margin-top: 0px 30px;
+        padding: 0px 60px;
+          display: inline-block;
+          vertical-align: center;}
+.cold {color: rgba(21, 10, 255, 0.7);}
+.cool {color: rgba(14, 198, 255, 0.7);}
+.mild {color: rgba(255, 191, 13, 0.7);}
+.warm {color: rgba(232, 100, 12, 0.7);}
+.hot {color: rgba(255, 0, 0, 0.7);}
+p.info {font-size: 70pt;
+        color: green;
+        }
+p.yellow {font-size: 80pt;
+          color: yellow;
+          }
+p.red {font-size: 70pt;
+        color: red;}
+#temp1 {border-right: 3px solid black;}
+#city {padding-top: 90px;
+                    height: 300px;}
